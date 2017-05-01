@@ -1,0 +1,58 @@
+.KeyframeInterpolation {
+  width: 300px;
+  margin: 1em;
+  border: 1px solid lightgray; }
+  .KeyframeInterpolation h2 {
+    font-size: 18px;
+    color: gray;
+    text-align: center; }
+  .KeyframeInterpolation .button-wrapper {
+    margin: 1em;
+    text-align: center; }
+    .KeyframeInterpolation .button-wrapper button:focus {
+      outline: 3px solid #6cf; }
+  .KeyframeInterpolation .ColorControl {
+    text-align: center; }
+    .KeyframeInterpolation .ColorControl .color-chip {
+      height: 50px; }
+    .KeyframeInterpolation .ColorControl .color-text {
+      font-family: monospace; }
+    .KeyframeInterpolation .ColorControl input[type=range] {
+      width: 95%;
+      margin: 1em 0; }
+    .KeyframeInterpolation .ColorControl .timing {
+      margin: 0.5em; }
+  .KeyframeInterpolation .KeyframesList {
+    padding: 0;
+    list-style: none; }
+  .KeyframeInterpolation .Keyframe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center; }
+    .KeyframeInterpolation .Keyframe input[type=number], .KeyframeInterpolation .Keyframe input[type=color] {
+      margin: 0 0.5em; }
+      .KeyframeInterpolation .Keyframe input[type=number]:focus, .KeyframeInterpolation .Keyframe input[type=color]:focus {
+        outline: 3px solid #6cf; }
+    .KeyframeInterpolation .Keyframe input[type=number] {
+      width: 50px; }
+    .KeyframeInterpolation .Keyframe .delete:focus {
+      outline: 3px solid #6cf; }
+body {
+  font-family: Arial, Helvetica, sans-serif; }
+
+h1 {
+  color: violet; }
+
+.KeyframeInterpolation, .json {
+  display: inline-block;
+  vertical-align: top; }
+
+.json {
+  width: 400px;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid lightgray; }
+
+/*# sourceMappingURL=styles.50feac679578a4987e7ff0cc7d780872.css.map*/
