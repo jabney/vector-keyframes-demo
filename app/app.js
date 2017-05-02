@@ -4,7 +4,7 @@ import KeyframeInterpolation
   from './components/KeyframeInterpolation/keyframe-interpolation'
 import './styles.scss'
 
-let keyframes = [
+let initial_keyframes = [
   {stop: 0.0, value: [0, 0, 255]},
   {stop: 0.0, value: [0, 255, 0]},
   {stop: 0.0, value: [255, 0, 0]}
@@ -13,8 +13,7 @@ let keyframes = [
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {keyframes}
-    this.onChangeKeyframes = this.onChangeKeyframes.bind(this)
+    this.state = {keyframes: initial_keyframes}
   }
 
   onChangeKeyframes(keyframes) {
@@ -27,7 +26,7 @@ class App extends React.Component {
         <h1>Keyframe Interpolation</h1>
         <KeyframeInterpolation
           keyframes={this.state.keyframes}
-          onChangeKeyframes={this.onChangeKeyframes} />
+          onChangeKeyframes={this.onChangeKeyframes.bind(this)} />
         <pre className="json">{JSON.stringify(this.state.keyframes, null, 2)}</pre>
       </div>
     )
