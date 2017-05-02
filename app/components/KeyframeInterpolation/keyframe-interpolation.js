@@ -35,14 +35,14 @@ export default class KeyframeInterpolation extends React.Component {
     this.state = {keyframes, sliderValue, color, timing}
   }
 
-  addKeyframe() {
+  onAddKeyframe() {
     const keyframes = this.state.keyframes.slice(0)
     const len = keyframes.length
     const vector = len && keyframes[len-1].vector || [127, 127, 127]
 
     keyframes.push({
       stop: 0.0,
-      vector: vector
+      value: vector
     })
     spaceKeysEvenly(keyframes)
 
@@ -111,7 +111,7 @@ export default class KeyframeInterpolation extends React.Component {
           onChangeColor={this.onChangeColor.bind(this)}
           onDeleteKeyframe={this.onDeleteKeyframe.bind(this)} />
         <div className="button-wrapper">
-          <button onClick={this.addKeyframe.bind(this)}>
+          <button onClick={this.onAddKeyframe.bind(this)}>
             Add Keyframe
           </button>
         </div>
